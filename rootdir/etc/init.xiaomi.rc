@@ -84,6 +84,9 @@ service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-serv
 
 on property:sys.boot_completed=1
     start vendor.goodix-events
+    
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
 
 on property:ro.boot.hwname=*
     setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
