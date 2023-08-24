@@ -297,6 +297,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qti.kernel.rc \
     init.recovery.qcom.rc \
+    init.sm6225.perf.rc \
     init.target.rc \
     init.xiaomi.rc \
     ueventd.qcom.rc
