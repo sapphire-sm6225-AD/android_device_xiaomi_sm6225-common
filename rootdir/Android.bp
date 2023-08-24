@@ -20,6 +20,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.sm6225.perf.rc",
+    src: "etc/init.sm6225.perf.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.qti.kernel.rc",
     src: "etc/init.qti.kernel.rc",
     sub_dir: "init/hw",
