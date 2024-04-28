@@ -257,7 +257,7 @@ class XiaomiSm6225UdfpsHander : public UdfpsHandler {
     bool isFpcFod;
 
     void setFodStatus(int value) {
-        int buf[MAX_BUF_SIZE] = {MI_DISP_PRIMARY, Touch_Fod_Enable, value};
+        int buf[MAX_BUF_SIZE] = {MI_DISP_PRIMARY, THP_FOD_DOWNUP_CTL, value};
         ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
     }
 
