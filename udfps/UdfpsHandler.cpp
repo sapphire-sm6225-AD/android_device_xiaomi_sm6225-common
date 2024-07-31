@@ -180,14 +180,6 @@ class XiaomiSm6225UdfpsHander : public UdfpsHandler {
             setFingerDown(false);
         }
 
-        /* vendorCode:
-         * 21: waiting for finger
-         * 22: finger down
-         * 23: finger up
-         */
-        if (vendorCode == 21) {
-            setFodStatus(FOD_STATUS_ON);
-        }
     }
 
     void cancel() {
