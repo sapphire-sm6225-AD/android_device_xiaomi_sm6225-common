@@ -23,7 +23,7 @@ ufsbsg_cc_defaults {
 }
 
 cc_library {
-    name: "libgptutils.bengal",
+    name: "libgpt-utils",
     vendor: true,
     recovery_available: true,
     defaults: ["ufsbsg_defaults"],
@@ -31,8 +31,14 @@ cc_library {
         "gpt-utils.cpp",
         "recovery-ufs-bsg.cpp",
     ],
+    static_libs: [
+            "libbase",
+            "libedify",
+            "libotautil",
+    ],
     shared_libs: [
             "libcutils",
+            "libion",
             "liblog",
             "libz",
     ],
@@ -45,7 +51,4 @@ cc_library {
     },
     owner: "qti",
     export_include_dirs: ["."],
-    header_libs: [
-            "generated_kernel_headers",
-    ],
 }
