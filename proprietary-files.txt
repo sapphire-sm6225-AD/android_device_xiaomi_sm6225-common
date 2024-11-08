@@ -633,9 +633,6 @@ vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 vendor/lib64/qtiPeripheralMgr.so
 
-# Power
-vendor/etc/public.libraries.txt
-
 # QCC
 system_ext/app/QCC/QCC.apk
 system_ext/bin/qccsyshal@1.2-service
