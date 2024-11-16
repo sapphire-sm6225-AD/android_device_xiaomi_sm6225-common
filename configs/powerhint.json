@@ -76,19 +76,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "GPUBusMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,gpubw/min_freq",
-      "Values": [
-        "15960",
-        "4173",
-        "3440",
-        "1525",
-        "762",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "GPUForceRailOn",
       "Path": "/sys/class/kgsl/kgsl-3d0/force_rail_on",
       "Values": [
@@ -116,26 +103,8 @@
       "ResetOnInit": true
     },
     {
-      "Name": "TASchedtuneBoost",
-      "Path": "/dev/stune/top-app/schedtune.boost",
-      "Values": [
-        "5",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CDSchedtuneBoost",
-      "Path": "/dev/stune/camera-daemon/schedtune.boost",
-      "Values": [
-        "1",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "CPUBWHystTriggerCount",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/hyst_trigger_count",
       "Values": [
         "0",
         "3"
@@ -144,7 +113,7 @@
     },
     {
       "Name": "CPUBWHistMemory",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/hist_memory",
       "Values": [
         "0",
         "20"
@@ -153,7 +122,7 @@
     },
     {
       "Name": "CPUBWHystLength",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/hyst_length",
       "Values": [
         "0",
         "10"
@@ -162,7 +131,7 @@
     },
     {
       "Name": "CPUBWSampleMs",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/sample_ms",
       "Values": [
         "10",
         "4"
@@ -171,7 +140,7 @@
     },
     {
       "Name": "CPUBWIOPercent",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/io_percent",
       "Values": [
         "80",
         "34"
@@ -180,7 +149,7 @@
     },
     {
       "Name": "CPUBWMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/min_freq",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/boost_freq",
       "Values": [
         "15960",
         "11863",
@@ -193,7 +162,7 @@
     },
     {
       "Name": "DDRLittleClusterMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:silver/min_freq",
       "Values": [
         "15960",
         "11863",
@@ -205,7 +174,7 @@
     },
     {
       "Name": "DDRBigClusterMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/min_freq",
       "Values": [
         "15960",
         "11863",
@@ -302,12 +271,6 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "5"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "TASchedtuneBoost",
       "Duration": 0,
       "Value": "5"
     },
@@ -421,12 +384,6 @@
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 1000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 1000,
       "Value": "2400000"
@@ -468,22 +425,10 @@
       "Value": "80"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_MID",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
       "Value": "1766400"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 0,
-      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
