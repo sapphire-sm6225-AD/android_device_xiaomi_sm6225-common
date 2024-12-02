@@ -146,11 +146,9 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
-camera.disable_zsl_mode=1
-sys.haptic.ignoreWhenCamera=true
-
-# Charger
-persist.vendor.quick.charge=1
+camera.disable_zsl_mode=true
+ro.camera.enableCamera1MaxZsl=1
+ro.hardware.camera=xiaomi
 
 # Codec C2
 debug.c2.use_dmabufheaps=1
@@ -164,15 +162,6 @@ vendor.qc2audio.suspend.enabled=true
 ro.crypto.allow_encrypt_override=true
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.filenames_mode=aes-256-cts
-
-# Dex2oat
-pm.dexopt.boot=verify
-pm.dexopt.first-boot=verify
-pm.dexopt.install=speed-profile
-dalvik.vm.image-dex2oat-filter=speed
-dalvik.vm.image-dex2oat-threads=8
-dalvik.vm.dex2oat-filter=speed
-dalvik.vm.dex2oat-threads=8
 
 # DRM
 drm.service.enabled=true
@@ -258,11 +247,14 @@ vendor.hw.fm.init=0
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# FS-verity
-ro.apk_verity.mode=2
+# Chipset
+ro.soc.manufacturer=QTI
+
+# FUSE
+persist.sys.fuse.passthrough.enable=true
 
 # Gatekeeper
-vendor.gatekeeper.is_security_level_spu=0
+vendor.gatekeeper.disable_spu=true
 
 # Graphics
 graphics.gpu.profiler.support=true
@@ -273,36 +265,26 @@ ro.opengles.version=196610
 # Keystore
 ro.hardware.keystore_desede=true
 
-# Log
-ro.control_privapp_permissions=enforce
-
 # Media
-media.stagefright.thumbnail.prefer_hw_codecs=true
-vendor.mm.enable.qcom_parser=16711663
-persist.mm.enable.prefetch=true
+debug.c2.use_dmabufheaps=1
+debug.stagefright.c2inputsurface=-1
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=0
+ro.media.xml_variant.profiles=_khaje_v0
 
-# Netflix
-vendor.netflix.bsp_rev=Q6115-31409-1
+# PASR
+vendor.pasr.activemode.enabled=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.qspm.enable=true
-vendor.pasr.activemode.enabled=true
-vendor.perf.framepacing.enable=1
-vendor.pasr.enabled=true
 
-# QCOM
+# Qcomd
 persist.vendor.qcomsysd.enabled=1
 
-# Sensors
-persist.vendor.sensors.debug.ssc_qmi_debug=true
-persist.vendor.sensors.enable.bypass_worker=true
-persist.vendor.sensors.enable.rt_task=false
-persist.vendor.sensors.hal_trigger_ssr=false
-persist.vendor.sensors.support_direct_channel=false
+# RCS
+persist.vendor.rcs.singlereg.feature=1
 
 # USB
-persist.sys.usb.config=none
 sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=ffs
 vendor.usb.dpl.inst.name=dpl
@@ -311,19 +293,7 @@ vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
-vendor.usb.use_gadget_hal=0
+vendor.usb.use_gadget_hal=1
 
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
-
-# Zygote
-zygote.critical_window.minute=10
-
-# Fling
-ro.min.fling_velocity=160
-ro.max.fling_velocity=20000
-ro.max.fling_velocity=20000
-ro.vendor.qti.cgroup_follow.enable=true
-persist.vendor.qti.inputopts.enable=true
-persist.vendor.qti.inputopts.movetouchslop=0.6
-ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0

@@ -1,2 +1,5 @@
+# Audio
+ro.vendor.soundtrigger.dfs.support=1
+
 # ODM Fwk-Detect
 ro.vendor.qti.va_odm.support=1
